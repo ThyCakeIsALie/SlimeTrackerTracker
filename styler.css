@@ -31,13 +31,16 @@ body{
 	
 	font-family:Digital;
 	
-	background-image:url(images/mainbg3.png);
+	/*background-image:url(images/mainbg3.png);
 	background-size: 120%;
 	background-repeat:no-repeat;
 	background-attachment: fixed;
 	
 	background-position:0px 24%;
-
+	*/
+	
+	background: rgb(255,255,255);
+	background: linear-gradient(90deg, rgba(255,255,255,1) 11%, rgba(255,181,192,1) 45%, rgba(0,212,255,1) 100%);
 	margin:none;
 	padding:none;
 	overflow:hidden;
