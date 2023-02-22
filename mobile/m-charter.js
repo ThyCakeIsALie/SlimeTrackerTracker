@@ -112,7 +112,7 @@ function openindexb(){
 	
 }
 function openindexc(){
-	window.location.replace("home.html");
+	window.location.replace("m-home.html");
 }
 
 counter();

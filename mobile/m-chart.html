@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="m-styler.css">
+<link rel="stylesheet" href="m-chart_styler.css">
+<title>Slime Charts</title>
+</head>
+
+<header>
+	<div id="navbar">
+	<div id = "maintitle" class="title"><h1>SLIME CHARTS</h1></div>
+	<div id="cover"></div>
+	</div>
+</header>
+
+
+<body onload="counter">
+	<div id="hyperbar" onscroll="setScroll()">
+	
+		
+		<div id="filler">
+			<h4 id="unfiller"><span id="type4">TIMER</span></h4>
+		</div>
+		
+		<div id="filler2">
+			<h4 id="unfiller2"><span id="type5">HOURS</span></h4>
+		</div>
+		
+		<div class="contentbar">
+			<h3 id="first_header">PARTS</h3>
+		</div>
+		<div class="fillercolor"></div>
+		<div class="fillercolor"></div>
+		<div class="fillercolor"></div>
+		<div id="chart">
+			<table>
+				<tr>
+					<td>ITEM</td>
+					<td class="b-right">STATUS</td>
+					<td>VALUE</td>
+				</tr>
+				<tr class="item">
+					<td>BNO085</td>
+					<td class="b-right">ACQUIRED</td>
+					<td>36000</td>
+				</tr>
+				<tr class="item">
+					<td>BATTERIES</td>
+					<td class="b-right">ACQUIRED</td>
+					<td>22400</td>
+				</tr>
+				<tr class="item">
+					<td>IMU MODULES</td>
+					<td class="b-right">ACQUIRED</td>
+					<td>7467</td>
+				</tr>
+				<tr class="item">
+					<td>EXTENSION CABLES</td>
+					<td class="b-right">ACQUIRED</td>
+					<td>8300</td>
+				</tr>
+				<tr class="item">
+					<td>MAIN TRACKER PCBs</td>
+					<td class="b-right">ACQUIRED</td>
+					<td>21600</td>
+				</tr>
+				<tr class="item">
+					<td>EXTENSION TRACKER PCBs</td>
+					<td class="b-right">ACQUIRED</td>
+					<td>8000</td>
+				</tr>
+				<tr class="item">
+					<td>USB CABLES</td>
+					<td class="b-right">ACQUIRED</td>
+					<td>4000</td>
+				</tr>
+				<tr class="item">
+					<td>MAIN CASE SCREWS</td>
+					<td class="b-right">ACQUIRED</td>
+					<td>38000</td>
+				</tr>
+				<tr class="item">
+					<td>DIY SET PACKAGING</td>
+					<td class="b-right">ACQUIRED</td>
+					<td>100</td>
+				</tr>
+				<tr class="item">
+					<td>STICKERS</td>
+					<td class="b-right">ACQUIRED</td>
+					<td>8000</td>
+				</tr>
+				<tr class="item">
+					<td>STRAPS</td>
+					<td class="b-right"><span class="problem">MISSING</span></td>
+					<td><span class="okay">IN TRANSIT</span></td>
+				</tr>
+			</table>
+		</div>
+		<div class="contentbar">
+			<h3 id="first_header">IN THE WORKS</h3>
+		</div>
+		<div id="chart">
+			<table>
+				<tr>
+					<td>ITEM</td>
+					<td class="b-right">STATUS</td>
+					<td>VALUE</td>
+				</tr>
+				<tr class="item">
+					<td>CASES PURPLE</td>
+					<td class="b-right"><span class="problem">MISSING</span></td>
+					<td>FEBRUARY (Factory Material Issue)</td>
+				</tr>
+				<tr class="item">
+					<td>CASES WHITE</td>
+					<td class="b-right"><span class="problem">MISSING</span></td>
+					<td><span class="problem">MARCH</span> (Factory Material Issue)</td>
+				</tr>
+				<tr class="item">
+					<td>CASES BLACK</td>
+					<td class="b-right"><span class="problem">MISSING</span></td>
+					<td><span class="problem">MARCH</span> (Factory Material Issue)</td>
+				</tr>
+				<tr class="item">
+					<td>PACKAGING</td>
+					<td class="b-right"><span class="problem">MISSING</span></td>
+					<td><span class="okay">IN TRANSIT</span></td>
+				</tr>
+				<tr class="item">
+					<td>INSTRUCTION MANUALS</td>
+					<td class="b-right"><span class="problem">MISSING</span></td>
+					<td><span class="severe_problem">NOT ORDERED</span></td>
+				</tr>
+				<tr class="item">
+					<td>EXTENSION CASE SCREWS</td>
+					<td class="b-right"><span class="problem">MISSING</span></td>
+					<td><span class="severe_problem">NOT ORDERED</span></td>
+				</tr>
+				<tr class="item">
+					<td>MAIN CASE SCREWS</td>
+					<td class="b-right">PARTLY FULFILLED</td>
+					<td>THIS IS FOR REMAINING SCREWS</td>
+				</tr>
+			</table>
+		</div>
+		<div class="contentbar">
+			<h3 id="first_header">ASSEMBLY STATE</h3>
+		</div>
+		<div id="chart">
+			<table>
+				<tr>
+					<td>ITEM</td>
+					<td class="b-right">ASSEMBLY STATUS</td>
+					<td>EXPECTATION</td>
+				</tr>
+				<tr class="item">
+					<td>MAIN PCBs</td>
+					<td class="b-right">3370</td>
+					<td>21600</td>
+				</tr>
+				<tr class="item">
+					<td>EXTENSION PCBs</td>
+					<td class="b-right"><span class="problem">80</span></td>
+					<td>8000</td>
+				</tr>
+				<tr class="item">
+					<td>MAIN TRACKERS</td>
+					<td class="b-right"><span class="severe_problem">0000</span></td>
+					<td>21600</td>
+				</tr>
+				<tr class="item">
+					<td>EXTENSION TRACKERS</td>
+					<td class="b-right"><span class="severe_problem">0000</span></td>
+					<td>8000</td>
+				</tr>
+				<tr class="item">
+					<td>WHOLE TRACKER SETS</td>
+					<td class="b-right"><span class="severe_problem">0000</span></td>
+					<td>3650</td>
+				</tr>
+			</table>
+		</div>
+		<div class="fillercolor"></div>
+		<div class="fillercolor"></div>
+		<div class="fillercolor"></div>
+		<div class="fillercolor"></div>
+		<div class="fillercolor"></div>
+		<div class="fillercolor"></div>
+		
+		<div id="filler3">
+			<h4 id="unfiller3" onclick="openindex()"><span id="type7">>>GO BACK</span></h4>
+		</div>
+		
+		<div class="fillercolorsolidlarge">
+		<h1><br><br><br><br><br><br></h1>
+		<h5>SlimeVR is an open source DIY / Crowdsource Project</h5>
+		</div>
+	</div>
+	<script src="m-charter.js"></script>
+</body>
+</html>
