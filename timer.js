@@ -1,6 +1,9 @@
 /**
  * 
  */
+
+var isMobile = false;
+
 var t = 0;
 var scrollH = 0;
 var loader = setInterval(counter, 1000);
@@ -45,10 +48,19 @@ var toggleIMG = false;
 setTimeout(clean,100);
 function clean(){
 	console.log("loaded");
+	
+	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+		isMobile = true;
+		console.log("mobile");
+	} else{
+		console.log("not mobile?");
+	}
+	
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
+	document.body.scrollLeft = document.documentElement.scrollLeft = 0;
 	document.getElementById("hyperbar").scrollTop = document.documentElement.scrollTop = 0;
 	document.getElementById("navbar").style.marginTop = -25 + "px";
-	if(window.innerWidth < 600){
+	if(isMobile == true){
 		document.getElementById("hyperbar").style.height = 2000 + "px";
 	}
 	else{
@@ -81,7 +93,7 @@ function setScroll() {
 		if(f < 0) f = 0;
 		//document.getElementById("navbar").style.opacity = f;
 		document.getElementById("navbar").style.marginTop = ((-1*t)-25) + "px";
-		if(window.innerWidth < 600){
+		if(isMobile == true){
 			document.getElementById("hyperbar").style.height = (2000 + t) + "px";
 		}
 		else{
@@ -91,7 +103,7 @@ function setScroll() {
 	}
 	else{
 		document.getElementById("navbar").style.marginTop = -25 + "px";
-		if(window.innerWidth < 600){
+		if(isMobile == true){
 			document.getElementById("hyperbar").style.height = 2000 + "px";
 		}
 		else{
