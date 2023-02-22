@@ -310,13 +310,25 @@ h5{
 	color:#514700;
 }
 
-#hyperbar{
-	margin-top:0;
-	width:106%;
-	margin-left:-8px;
-	overflow:scroll;
-	overflow-x:hidden;
-	height:1000px;
+@media screen and (max-width: 600px) {
+ 	#hyperbar{
+		margin-top:0;
+		width:106%;
+		margin-left:-8px;
+		overflow:scroll;
+		overflow-x:hidden;
+		height:2000px;
+	}
+}
+@media screen and (min-width: 600px) {
+ 	#hyperbar{
+		margin-top:0;
+		width:106%;
+		margin-left:-8px;
+		overflow:scroll;
+		overflow-x:hidden;
+		height:1000px;
+	}
 }
 
 .contentbar{

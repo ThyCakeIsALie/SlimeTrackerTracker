@@ -20,7 +20,12 @@ function clean(){
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 	document.getElementById("hyperbar").scrollTop = document.documentElement.scrollTop = 0;
 	document.getElementById("navbar").style.marginTop = -25 + "px";
-	document.getElementById("hyperbar").style.height = 1000 + "px";
+	if(window.innerWidth < 600){
+		document.getElementById("hyperbar").style.height = 2000 + "px";
+	}
+	else{
+		document.getElementById("hyperbar").style.height = 1000 + "px";
+	}
 }
 
 function setScroll() { 
@@ -35,12 +40,22 @@ function setScroll() {
 		if(f < 0) f = 0;
 		//document.getElementById("navbar").style.opacity = f;
 		document.getElementById("navbar").style.marginTop = ((-1*t)-25) + "px";
-		document.getElementById("hyperbar").style.height = (1000 + t) + "px";
+		if(window.innerWidth < 600){
+			document.getElementById("hyperbar").style.height = (2000 + t) + "px";
+		}
+		else{
+			document.getElementById("hyperbar").style.height = (1000 + t) + "px";
+		}
 		//console.log(f);
 	}
 	else{
 		document.getElementById("navbar").style.marginTop = -25 + "px";
-		document.getElementById("hyperbar").style.height = (1000) + "px";
+		if(window.innerWidth < 600){
+			document.getElementById("hyperbar").style.height = 2000 + "px";
+		}
+		else{
+			document.getElementById("hyperbar").style.height = 1000 + "px";
+		}
 		//document.getElementById("navbar").style.opacity = 1;
 	}
 	
@@ -53,7 +68,13 @@ function setScroll() {
 		if(f2 < 0) f2 = 0;
 		//document.getElementById("navbar").style.opacity = f;
 		document.getElementById("navbar").style.marginTop = ((-1*t)-25) + "px";
-		document.getElementById("hyperbar").style.height = (1000 + t) + "px";
+		if(window.innerWidth < 600){
+			document.getElementById("hyperbar").style.height = (2000 + t) + "px";
+			console.log(document.getElementById("hyperbar").style.height);
+		}
+		else{
+			document.getElementById("hyperbar").style.height = (1000 + t) + "px";
+		}
 		//console.log(f);
 	}
 }
