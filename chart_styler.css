@@ -1,0 +1,56 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Digital3;
+  src: url('fonts/UAV-OSD-Sans-Mono.ttf');
+}
+table{
+	width:100%;
+	font-size:14pt;
+	border: solid black 1px;
+}
+td{
+	text-align: center;
+	border-bottom: solid black 1px;
+	border-bottom-style: dashed;
+}
+#chart{
+	background-color:rgb(255,255,255);
+}
+.item{
+	font-family:Digital3;
+	height:50px;
+	font-size:16pt;
+}
+.b-right{
+	border-right: solid black 1px;
+}
+.problem{
+	padding-top: 4px;
+	padding-left:4px;
+	background-color:red;
+}
+@keyframes issue {
+   0% {color:black;}
+   50% {color:black;}
+   51% {color:white;}
+ 100% {color:white;}
+}
+.severe_problem{
+	animation-name: issue;
+	animation-duration: .4s;
+	animation-iteration-count: infinite;
+	
+	padding-top: 4px;
+	padding-left:4px;
+	background-color:red;
+}
+.okay{
+	padding-top: 4px;
+	padding-left:4px;
+	background-color:rgb(255,205,0);
+}
+.perfect{
+	padding-top: 4px;
+	padding-left:4px;
+	background-color:rgb(60,255,0);
+}
