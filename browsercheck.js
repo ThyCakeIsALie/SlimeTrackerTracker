@@ -54,7 +54,7 @@ function checkbrowser(){
 	else{
 		csstype = 0;
 		document.getElementById("text").innerHTML = "<h1 id=\"text\">NO BROWSER DETECTED ):</h1>";
-		setTimeout(window.location.replace("home.html"),1000)
+		window.location.replace("home.html");
 	}
 }
 
