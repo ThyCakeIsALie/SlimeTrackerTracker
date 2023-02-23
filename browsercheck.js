@@ -1,7 +1,7 @@
 /**
  * 
  */
-var isMobile = true;
+var isMobile = false;
 setTimeout(load, 500);
 function load(){
 	if(isMobile){//if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
@@ -42,16 +42,19 @@ var csstype = 0;
 function checkbrowser(){
 	if((browserName=="chrome" || browserName=="chrome" || browserName=="chrome" || browserName=="chrome") && !(browserName=="No browser detection")){
 		csstype = 0;
-		document.getElementById("text").innerHTML = "<h1 id=\"text\">CHROMIUM / SAFARI CSS Loading!</h1>"
+		document.getElementById("text").innerHTML = "<h1 id=\"text\">CHROMIUM / SAFARI CSS Loading!</h1>";
+		window.location.replace("home.html");
 	}
 	else if(browserName == "firefox"){
 		//FIREFOX
 		csstype = 1;
-		document.getElementById("text").innerHTML = "<h1 id=\"text\">FIREFOX CSS Loading!</h1>"
+		document.getElementById("text").innerHTML = "<h1 id=\"text\">FIREFOX CSS Loading!</h1>";
+		window.location.replace("mozilla/f-home.html");
 	}
 	else{
 		csstype = 0;
-		document.getElementById("text").innerHTML = "<h1 id=\"text\">NO BROWSER DETECTED ):</h1>"
+		document.getElementById("text").innerHTML = "<h1 id=\"text\">NO BROWSER DETECTED ):</h1>";
+		setTimeout(window.location.replace("home.html"),1000)
 	}
 }
 

@@ -2,8 +2,7 @@
  * 
  */
 
-var isMobile = true;
-let mobileHeight = 200;
+var isMobile = false;
 
 var t = 0;
 var scrollH = 0;
@@ -49,14 +48,20 @@ var toggleIMG = false;
 setTimeout(clean,100);
 function clean(){
 	console.log("loaded");
-
-	mobileHeight = window.innerHeight;
-
+	
+	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+		isMobile = true;
+		console.log("mobile");
+	} else{
+		console.log("not mobile?");
+	}
+	
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
+	document.body.scrollLeft = document.documentElement.scrollLeft = 0;
 	document.getElementById("hyperbar").scrollTop = document.documentElement.scrollTop = 0;
 	document.getElementById("navbar").style.marginTop = -25 + "px";
 	if(isMobile == true){
-		document.getElementById("hyperbar").style.height = mobileHeight + "px";
+		document.getElementById("hyperbar").style.height = 2000 + "px";
 	}
 	else{
 		document.getElementById("hyperbar").style.height = 1000 + "px";
@@ -89,7 +94,7 @@ function setScroll() {
 		//document.getElementById("navbar").style.opacity = f;
 		document.getElementById("navbar").style.marginTop = ((-1*t)-25) + "px";
 		if(isMobile == true){
-			document.getElementById("hyperbar").style.height = (mobileHeight + t) + "px";
+			document.getElementById("hyperbar").style.height = (2000 + t) + "px";
 		}
 		else{
 			document.getElementById("hyperbar").style.height = (1000 + t) + "px";
@@ -99,7 +104,7 @@ function setScroll() {
 	else{
 		document.getElementById("navbar").style.marginTop = -25 + "px";
 		if(isMobile == true){
-			document.getElementById("hyperbar").style.height = (mobileHeight) + "px";
+			document.getElementById("hyperbar").style.height = 2000 + "px";
 		}
 		else{
 			document.getElementById("hyperbar").style.height = 1000 + "px";
@@ -129,7 +134,7 @@ function openchart(){
 }
 function openchartb(){
 	if(count < 100){
-		count++;
+		count+=3;
 		document.body.style.opacity = (100-count) + "%";
 		//document.body.style.backgroundPosition = "0px "+ (10*count) +"px";
 		document.body.style.backgroundPosition = "0px "+ (10000) +"px";
@@ -141,7 +146,7 @@ function openchartb(){
 	
 }
 function openchartc(){
-	window.location.replace("m-chart.html");
+	window.location.replace("f-chart.html");
 }
 
 counter();

@@ -2,15 +2,15 @@
 
 @font-face {
   font-family: Digital;
-  src: url(fonts/square_sans_serif_7.ttf);
+  src: url(../fonts/square_sans_serif_7.ttf);
 }
 @font-face {
   font-family: Digital2;
-  src: url(fonts/square_sans_serif_7.ttf);
+  src: url(../fonts/square_sans_serif_7.ttf);
 }
 @font-face {
   font-family: Digital3;
-  src: url('fonts/UAV-OSD-Sans-Mono.ttf');
+  src: url('../fonts/UAV-OSD-Sans-Mono.ttf');
 }
 
 @keyframes intro {
@@ -27,7 +27,7 @@
 
 body{
 	animation-name: intro;
-	animation-duration: 1s;
+	animation-duration: .5s;
 	
 	font-family:Digital;
 	
@@ -53,7 +53,7 @@ body::after{
       bottom: 0px;
       left: 0px;
 	animation-name: intro2;
-	animation-duration: 1s;
+	animation-duration: .5s;
 	
 	font-family:Digital;
 	height:0px;
@@ -153,35 +153,29 @@ h5{
 @keyframes counter {
    0% {color: rgb(0,0,0);}
   15% {color: rgb(0,0,0);}
-  16% {color: rgb(255,255,255);}
-  25% {color: rgb(255,222,0);}
-  49% {color: rgb(50,170,255);}
-  50% {color: rgb(255,222,0);}
-  75% {color: rgb(50,170,255);}
- 100% {color: rgb(255,222,0);}
+  20% {color: rgb(255,255,255);}
+
+  50% {color: rgb(50,170,255);}
+ 75% {color: rgb(255,222,0);}
 }
 @keyframes counter2 {
    0% {color: rgb(0,0,0);}
   15% {color: rgb(0,0,0);}
-  16% {color: rgb(255,255,255);}
-  25% {color: rgb(215,188,0);}
-  49% {color: rgb(50,170,255);}
-  50% {color: rgb(215,188,0);}
-  75% {color: rgb(50,170,255);}
- 100% {color: rgb(215,188,0);}
+  20% {color: rgb(255,255,255);}
+  
+  50% {color: rgb(50,170,255);}
+ 75% {color: rgb(215,188,0);}
 }
 @keyframes counter3 {
    0% {color: rgb(0,0,0);}
   15% {color: rgb(0,0,0);}
 
-  25% {color: #514700;}
- 100% {color: #514700;}
+  50% {color: #514700;}
+ 75% {color: #514700;}
 }
 @keyframes margin-bumper {
-   0% {margin-top:0px;}
-   15% {margin-top:0px;}
-  25% {margin-top:50px;}
- 50% {margin-top:0px;}
+   0% {margin-top:50px;}
+ 100% {margin-top:0px;}
 }
 
 @keyframes selector {
@@ -216,12 +210,12 @@ h5{
 	animation-duration: 4s;
 	animation-iteration-count: 1;
 	
-	height:123px;
-	margin-top:-27px;
+	height:126px;
+	margin-top:-37px;
 }
 #filler2{
 	animation-name: margin-bumper;
-	animation-duration: 4s;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 	
 	color: rgb(215,188,0);
@@ -249,11 +243,11 @@ h5{
 	
 	color: rgb(215,188,0);
 	height:126px;
-	margin-top:-27px;
+	margin-top:-37px;
 }
 #filler3{
 	animation-name: margin-bumper;
-	animation-duration: 4s;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 	
 	margin-top:0px;
@@ -278,7 +272,7 @@ h5{
 	animation-iteration-count: 1;
 	
 	height:126px;
-	margin-top:-27px;
+	margin-top:-37px;
 }
 #filler4{
 	margin-top:0px;
@@ -303,12 +297,13 @@ h5{
 	animation-iteration-count: 1;
 	
 	height:126px;
-	margin-top:-27px;
+	margin-top:-37px;
 }
 
 .hideval{
 	color:#514700;
 }
+
 
  	#hyperbar{
 		margin-top:0;

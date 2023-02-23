@@ -82,8 +82,7 @@ h3{
 }
 h4{
 	font-style:italic;
-	font-size:95pt;
-	
+	font-size:75pt;
 	padding-top:0px;
 	color:rgb(255,222,0);
 	background-color:black;
@@ -203,7 +202,7 @@ h5{
 	animation-iteration-count: 1;
 	
 	height:123px;
-	margin-top:-27px;
+	margin-top:-15px;
 }
 #filler2{
 	animation-name: margin-bumper;
@@ -235,7 +234,7 @@ h5{
 	
 	color: rgb(215,188,0);
 	height:126px;
-	margin-top:-27px;
+	margin-top:-15px;
 }
 #filler3{
 	animation-name: margin-bumper;
@@ -264,7 +263,7 @@ h5{
 	animation-iteration-count: 1;
 	
 	height:126px;
-	margin-top:-27px;
+	margin-top:-15px;
 }
 #filler4{
 	margin-top:0px;
@@ -289,7 +288,7 @@ h5{
 	animation-iteration-count: 1;
 	
 	height:126px;
-	margin-top:-27px;
+	margin-top:-15px;
 }
 
 .hideval{
@@ -357,8 +356,7 @@ button{
 }
 #image_2{
 	margin-top:45px;
-	margin-right:-40px;
-	float:right;
+	float:center;
 	width:600px;
 	height:400px;
 

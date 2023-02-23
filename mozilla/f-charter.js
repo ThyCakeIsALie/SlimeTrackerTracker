@@ -2,8 +2,8 @@
  * 
  */
 
-var isMobile = true;
-let mobileHeight = 200;	
+var isMobile = false;
+	
 
 var scrollH = 0;
 var loader = setInterval(counter, 1000);
@@ -29,7 +29,6 @@ function clean(){
 		console.log("not mobile?");
 	}
 	
-	mobileHeight = window.innerHeight;
 	
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 	document.body.scrollLeft = document.documentElement.scrollLeft = 0;
@@ -56,7 +55,7 @@ function setScroll() {
 		//document.getElementById("navbar").style.opacity = f;
 		document.getElementById("navbar").style.marginTop = ((-1*t)-25) + "px";
 		if(isMobile == true){
-			document.getElementById("hyperbar").style.height = (mobileHeight+t) + "px";
+			document.getElementById("hyperbar").style.height = (2000 + t) + "px";
 		}
 		else{
 			document.getElementById("hyperbar").style.height = (1000 + t) + "px";
@@ -66,7 +65,7 @@ function setScroll() {
 	else{
 		document.getElementById("navbar").style.marginTop = -25 + "px";
 		if(isMobile == true){
-			document.getElementById("hyperbar").style.height = mobileHeight + "px";
+			document.getElementById("hyperbar").style.height = 2000 + "px";
 		}
 		else{
 			document.getElementById("hyperbar").style.height = 1000 + "px";
@@ -84,7 +83,7 @@ function setScroll() {
 		//document.getElementById("navbar").style.opacity = f;
 		document.getElementById("navbar").style.marginTop = ((-1*t)-25) + "px";
 		if(isMobile == true){
-			document.getElementById("hyperbar").style.height = (mobileHeight+t) + "px";
+			document.getElementById("hyperbar").style.height = (2000 + t) + "px";
 		}
 		else{
 			document.getElementById("hyperbar").style.height = (1000 + t) + "px";
@@ -102,7 +101,7 @@ function openindex(){
 }
 function openindexb(){
 	if(count < 100){
-		count++;
+		count+=3;
 		document.body.style.opacity = (100-count) + "%";
 		document.body.style.backgroundPosition = "0px "+ (10000) +"px";
 	}
@@ -113,7 +112,7 @@ function openindexb(){
 	
 }
 function openindexc(){
-	window.location.replace("m-home.html");
+	window.location.replace("f-home.html");
 }
 
 counter();
