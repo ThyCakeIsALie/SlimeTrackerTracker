@@ -1,10 +1,15 @@
 /**
  * 
  */
-
-var isMobile = false;
-
 var t = 0;
+var mainHeight = 1000;
+
+window.onresize = adjustHeight;
+function adjustHeight() {
+    mainHeight = window.innerHeight;
+	document.getElementById("hyperbar").style.height = (mainHeight+t-50) + "px";
+}
+
 var scrollH = 0;
 var loader = setInterval(counter, 1000);
 clearInterval(loader);
@@ -48,24 +53,14 @@ var toggleIMG = false;
 setTimeout(clean,100);
 function clean(){
 	console.log("loaded");
-	
-	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-		isMobile = true;
-		console.log("mobile");
-	} else{
-		console.log("not mobile?");
-	}
-	
+
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 	document.body.scrollLeft = document.documentElement.scrollLeft = 0;
 	document.getElementById("hyperbar").scrollTop = document.documentElement.scrollTop = 0;
 	document.getElementById("navbar").style.marginTop = -25 + "px";
-	if(isMobile == true){
-		document.getElementById("hyperbar").style.height = 2000 + "px";
-	}
-	else{
-		document.getElementById("hyperbar").style.height = 1000 + "px";
-	}
+	
+	mainHeight = window.innerHeight;
+	document.getElementById("hyperbar").style.height = (mainHeight+t-50) + "px";
 	setInterval(counter, 1000);
 }
 
@@ -75,13 +70,7 @@ function setScroll() {
 	if(scrollH > 600 && toggleIMG == false){
 		toggleIMG = true;
 		changer = setInterval(toggleIMGf, 10);
-		//console.log(scrollH);
 		opc = 0;
-	}
-	else if(scrollH < 601){
-		//toggleIMG = false;
-		//opc = 0;
-		//document.getElementById("graphicimage3").style.opacity = (opc/100);
 	}
 	
 	if(scrollH > 400){
@@ -91,25 +80,12 @@ function setScroll() {
 		}
 		var f = 1 - t/100;
 		if(f < 0) f = 0;
-		//document.getElementById("navbar").style.opacity = f;
 		document.getElementById("navbar").style.marginTop = ((-1*t)-25) + "px";
-		if(isMobile == true){
-			document.getElementById("hyperbar").style.height = (2000 + t) + "px";
-		}
-		else{
-			document.getElementById("hyperbar").style.height = (1000 + t) + "px";
-		}
-		//console.log(f);
+		document.getElementById("hyperbar").style.height = (mainHeight + t) + "px";
 	}
 	else{
 		document.getElementById("navbar").style.marginTop = -25 + "px";
-		if(isMobile == true){
-			document.getElementById("hyperbar").style.height = 2000 + "px";
-		}
-		else{
-			document.getElementById("hyperbar").style.height = 1000 + "px";
-		}
-		//document.getElementById("navbar").style.opacity = 1;
+		document.getElementById("hyperbar").style.height = mainHeight + "px";
 	}
 }
 var changer = setInterval(toggleIMGf, 10);
@@ -118,7 +94,6 @@ clearInterval(changer);
 function toggleIMGf(){
 	document.getElementById("graphicimage3").style.opacity = (opc/100);
 	opc+=1;
-	//console.log(opc);
 	if(opc > 100){
 		opc = 100;
 		clearInterval(loader);
@@ -136,7 +111,6 @@ function openchartb(){
 	if(count < 100){
 		count+=3;
 		document.body.style.opacity = (100-count) + "%";
-		//document.body.style.backgroundPosition = "0px "+ (10*count) +"px";
 		document.body.style.backgroundPosition = "0px "+ (10000) +"px";
 	}
 	else{

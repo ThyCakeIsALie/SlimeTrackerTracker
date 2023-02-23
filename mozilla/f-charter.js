@@ -3,7 +3,7 @@
  */
 
 var isMobile = false;
-	
+var mainHeight = 1000;
 
 var scrollH = 0;
 var loader = setInterval(counter, 1000);
@@ -29,6 +29,7 @@ function clean(){
 		console.log("not mobile?");
 	}
 	
+	mainHeight = window.innerHeight;
 	
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 	document.body.scrollLeft = document.documentElement.scrollLeft = 0;
