@@ -4,7 +4,7 @@
 var isMobile = false;
 setTimeout(load, 500);
 function load(){
-	if(isMobile){//if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
 		isMobile = true;
 		console.log("mobile");
 		document.getElementById("text").innerHTML = "<h1 id=\"text\">Mobile Browser Detected</h1>"
