@@ -40,7 +40,7 @@ body{
 	*/
 	
 	background: rgb(255,255,255);
-	background: linear-gradient(90deg, rgba(255,255,255,1) 11%, rgba(255,181,192,1) 45%, rgba(0,212,255,1) 100%);
+	background: linear-gradient(90deg, rgba(255,255,255,1) 11%, rgba(0,212,255,1) 45%, rgba(255,181,192,1) 77%, rgba(255,255,255,1) 97%);
 	margin:none;
 	padding:none;
 	overflow:hidden;
