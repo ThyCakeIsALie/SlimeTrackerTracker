@@ -14,7 +14,7 @@
 }
 @font-face {
   font-family: Digital4;
-  src: url('fonts/Linebeam.ttf');
+  src: url('../fonts/Linebeam.ttf');
 }
 
 @keyframes intro {
