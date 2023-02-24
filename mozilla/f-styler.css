@@ -71,6 +71,10 @@ body::after{
 
 }
 
+.contenttext2{
+	font-family:Digital4;
+}
+
 h1{
 	font-style:italic;
 	margin-top:23px;
