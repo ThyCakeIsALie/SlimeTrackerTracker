@@ -12,6 +12,10 @@
   font-family: Digital3;
   src: url('fonts/UAV-OSD-Sans-Mono.ttf');
 }
+@font-face {
+  font-family: Digital4;
+  src: url('fonts/Linebeam.ttf');
+}
 
 @keyframes intro {
    0% {opacity:100%}
