@@ -63,6 +63,7 @@ function clean(){
 	document.getElementById("navbar").style.marginTop = -25 + "px";
 	
 	document.getElementById("hyperbar").style.height = (mainHeight) + "px";
+	setInterval(counter, 1000);
 }
 
 function setScroll() { 

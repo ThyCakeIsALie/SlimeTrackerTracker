@@ -56,6 +56,8 @@ function clean(){
 	document.getElementById("hyperbar").scrollTop = document.documentElement.scrollTop = 0;
 	document.getElementById("navbar").style.marginTop = -25 + "px";
 	document.getElementById("hyperbar").style.height = mobileHeight + "px";
+	
+	setInterval(counter, 1000);
 }
 
 function setScroll() { 
